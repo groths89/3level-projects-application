@@ -1,0 +1,62 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+}
+
+.body {
+    background-color: hsl(0, 4%, 89%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem); 
+}
+
+h3 {
+    color: hsl(0, 0%, 19%);
+    margin: .75em 0 0;
+    min-height: 37px;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(4, minmax(auto, auto));
+    grid-template-rows: repeat(3, minmax(auto, auto));
+    gap: 1.25em;
+    margin-bottom: 1em;
+}
+
+.cards {
+    color: #FFFFFF;
+    border: .05em solid hsl(0, 26%, 26%);
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: transform 250ms linear;
+}
+
+#score {
+    padding: .5em 1em;
+    width: 7em;
+    margin: .5em .25em;
+    color: hsl(0, 0%, 87%);
+    background-color: hsl(0, 0%, 19%);
+    border-bottom: hsl(0, 26%, 26%);
+}

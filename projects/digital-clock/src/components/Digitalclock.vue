@@ -1,0 +1,166 @@
+<template>
+  <div class="body">
+    <div class="date"></div>
+    <div class="wrapper">
+      <div class="clocks-container">
+        <div class="main-clock"></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import("../main");
+</script>
+
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+@font-face {
+  font-family: "digital-7";
+  src: url(../../public/css/webfonts/digital-7.ttf);
+}
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  background-color: #000000;
+  color: #ececec;
+  height: 100vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+  border-radius: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25%;
+  padding-left: 5%;
+}
+
+.clocks-container {
+  width: 30em;
+  margin: 0 auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-clock {
+  text-align: center;
+  font-family: "digital-7", sans-serif;
+  font-size: 10em;
+  width: 100%;
+  margin: 0 auto;
+  color: #1eff00;
+  border: 1px solid #ececec;
+}
+
+.other-clock {
+  height: 10em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.clock {
+  width: 5em;
+  font-family: "digital-7", sans-serif;
+  font-size: 3em;
+  color: #1eff00;
+  text-align: center;
+}
+
+.date {
+  float: right;
+  margin: 0.25em 0.25em 0 0;
+}
+
+.timezone {
+  float: left;
+  margin: 0.25em 0 0 0.25em;
+  font-size: 10pt;
+}
+
+.timezone select {
+  display: none;
+}
+
+.select-selected {
+  background-color: rgb(59, 59, 59);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: relative;
+  top: 10px;
+  left: 100px;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  top: 10px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* Style items (options): */
+.select-items {
+  height: 100px;
+  position: relative;
+  background-color: rgb(59, 59, 59);
+  z-index: 99;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 234px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>

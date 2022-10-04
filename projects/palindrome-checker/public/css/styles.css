@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+}
+
+.body {
+    background-color: hsl(240, 1%, 32%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form button {
+    margin-top: 1em;
+}
+
+.submit-btn {
+    font-size: inherit;
+    grid-column: span 2;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue, 200), var(--saturation, 1%), calc(var(--lightness-offset, 0%) + var(--lightness, 51%)));
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: .25em;
+    padding: .5em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+    --lightness-offset: 10%;
+}
+
+.input-string {
+    border-radius: .25em;
+    border: none;
+    padding: .5em;
+    width: 28em;
+    height: 2em;
+}
+
+.result {
+    display: flex;
+    margin: 3em 0;
+    background-color: hsl(0, 0%, 7%);
+    width: 8em;
+    height: 7em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25em;
+}
+
+.yes {
+    color: hsl(125, 85%, 47%);
+}
+
+.no {
+    color: hsl(0, 85%, 47%);
+}

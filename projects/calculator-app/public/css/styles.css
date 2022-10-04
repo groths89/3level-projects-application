@@ -1,0 +1,62 @@
+body{
+    margin: 0 0;
+}
+
+.body {
+    background-color: #0f3158;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 18em;
+}
+
+input{
+    outline: 0;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    border: 0;
+    color: #495069;
+    background-color: hsl(var(--hue, 0), var(--saturation, 0%), calc(var(--lightness-offset, 0%) + var(--lightness, 74%)));
+    width: 60px;
+    height: 50px;
+    float: left;
+    margin: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+
+input:hover, input:focus {
+    --lightness-offset: 10%;
+}
+
+.operator{
+    background-color: hsl(var(--hue, 36), var(--saturation, 93%), calc(var(--lightness-offset, 0%) + var(--lightness, 54%)));
+    position: relative;
+}
+
+.operator:hover, .operator:focus {
+    --lightness-offset: 10%;
+}
+
+#clear{
+    float: left;
+    position: relative;
+    display: block;
+    background-color: hsl(var(--hue, 354), var(--saturation, 87%), calc(var(--lightness-offset, 0%) + var(--lightness, 58%)));
+    margin-bottom: 15px;
+}
+
+#clear:hover, #clear:focus {
+    --lightness-offset: 10%;
+}
+
+.window {
+    background-color: #bcdafd;
+    width: 92%;
+}
